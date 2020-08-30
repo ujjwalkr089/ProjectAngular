@@ -3,8 +3,8 @@
 import { User } from '@app/_models';
 import { AccountService } from '@app/_services';
 
-@Component({ templateUrl: 'home.component.html' })
-export class HomeComponent {
+@Component({ templateUrl: 'success.component.html' })
+export class SuccessComponent {
     user: User;
 
     constructor(private accountService: AccountService) {

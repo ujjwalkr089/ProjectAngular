@@ -1,4 +1,16 @@
-﻿<div class="card">
+﻿<nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="../home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="../login">Login</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="card">
     <h4 class="card-header">Register</h4>
     <div class="card-body">
         <form [formGroup]="form" (ngSubmit)="onSubmit()">
@@ -36,7 +48,7 @@
                     <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
                     Register
                 </button>
-                <a routerLink="../login" class="btn btn-link">Cancel</a>
+                <a routerLink="../home" class="btn btn-link">Cancel</a>
             </div>
         </form>
     </div>
