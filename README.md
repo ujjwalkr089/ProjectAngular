@@ -1,5 +1,5 @@
-# angular-10-registration-login-example
+# angular-registration-login
 
-Angular 10 - User Registration and Login Example
+Angular User Registration and Login
 
 To see a demo and further details contact komalkumari95@gmail.com
