@@ -7,12 +7,14 @@ import { LayoutComponent } from './layout.component';
 import { LoginComponent } from './login.component';
 import { RegisterComponent } from './register.component';
 import { HomepageComponent } from './homepage.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
     imports: [
         CommonModule,
         ReactiveFormsModule,
-        AccountRoutingModule
+        AccountRoutingModule,
+        CarouselModule
     ],
     declarations: [
         LayoutComponent,

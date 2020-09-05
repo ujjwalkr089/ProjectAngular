@@ -2,6 +2,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 // used to create fake backend
 import { fakeBackendProvider } from './_helpers';
@@ -12,12 +13,14 @@ import { AppComponent } from './app.component';
 import { AlertComponent } from './_components';
 import { SuccessComponent } from './success';
 
+
 @NgModule({
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,
-        AppRoutingModule
+        AppRoutingModule,
+        CarouselModule
     ],
     declarations: [
         AppComponent,
