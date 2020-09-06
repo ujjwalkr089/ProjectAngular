@@ -1,5 +1,31 @@
-﻿<h1>Users</h1>
-<a routerLink="add" class="btn btn-sm btn-success mb-2">Add User</a>
+﻿<!-- Sidebar/menu -->
+<nav class="therichpost-sidebar therichpost-collapse therichpost-white therichpost-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="therichpost-container therichpost-row">
+    <div class="therichpost-col s4">
+      <img src="../assets/image/image2.jpg" class="therichpost-circle therichpost-margin-right" style="width:46px">
+    </div>
+    <div class="therichpost-col s8 therichpost-bar">
+      <span><h3>Welcome </h3></span><br>
+    </div>
+  </div>
+  <hr>
+  <div class="therichpost-container">
+    <h5>Dashboard</h5>
+  </div>
+  <div class="therichpost-bar-block">
+    <a href="#" class="therichpost-bar-item therichpost-button therichpost-padding therichpost-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a routerLink="add" class="therichpost-bar-item therichpost-button therichpost-padding"><i class="fa fa-cog fa-fw"></i>  Add User</a>
+  </div>
+</nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="therichpost-overlay therichpost-hide-large therichpost-animate-opacity" (click)="therichpost_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- !PAGE CONTENT! -->
+<div class="therichpost-main" style="margin-left:300px;margin-top:43px;">
+  <!-- Header -->
+  <header class="therichpost-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i> <h1>Manage Users</h1></b></h5>
+  </header>
+  <div class="therichpost-row-padding therichpost-margin-bottom">
 <table class="table table-striped">
     <thead>
         <tr>
@@ -29,3 +55,58 @@
         </tr>
     </tbody>
 </table>
+  </div>
+
+  <hr>
+  <div class="therichpost-container">
+    <h5>Recent Comments</h5>
+    <div class="therichpost-row">
+      <div class="therichpost-col m2 text-center">
+        <img class="therichpost-circle" src="../assets/image/avatar3.png" style="width:96px;height:96px">
+      </div>
+      <div class="therichpost-col m10 therichpost-container">
+        <h4>John <span class="therichpost-opacity therichpost-medium">Sep 29, 2014, 9:12 PM</span></h4>
+        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+    <div class="therichpost-row">
+      <div class="therichpost-col m2 text-center">
+        <img class="therichpost-circle" src="../assets/image/avatar1.png" style="width:96px;height:96px">
+      </div>
+      <div class="therichpost-col m10 therichpost-container">
+        <h4>Bo <span class="therichpost-opacity therichpost-medium">Sep 28, 2014, 10:15 PM</span></h4>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+  </div>
+  <div class="therichpost-container therichpost-dark-grey therichpost-padding-32">
+    <div class="therichpost-row">
+      <div class="therichpost-container therichpost-third">
+        <h5 class="therichpost-bottombar therichpost-border-green">Demographic</h5>
+        <p>Language</p>
+        <p>Country</p>
+        <p>City</p>
+      </div>
+      <div class="therichpost-container therichpost-third">
+        <h5 class="therichpost-bottombar therichpost-border-red">System</h5>
+        <p>Browser</p>
+        <p>OS</p>
+        <p>More</p>
+      </div>
+      <div class="therichpost-container therichpost-third">
+        <h5 class="therichpost-bottombar therichpost-border-orange">Target</h5>
+        <p>Users</p>
+        <p>Active</p>
+        <p>Geo</p>
+        <p>Interests</p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer
+  <footer class="therichpost-container therichpost-padding-16 therichpost-light-grey">
+    <h4>FOOTER</h4>
+  </footer> -->
+  <!-- End page content -->
+</div>
+
+

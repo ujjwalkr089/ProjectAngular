@@ -1,9 +1,243 @@
-﻿
-<div class="card">
-  <h4 class="card-header">Sussess Page</h4>
-  <div class="card-body">
-    <h1>Hi {{user.firstName}}!</h1>
-        <p>You're logged in Successfully!!</p>
-       <!-- <p><a routerLink="/users">Manage Users</a></p> -->
-  </div>
+﻿<!-- Top container -->
+<div class="therichpost-bar therichpost-top therichpost-black therichpost-large" style="z-index:4">
+  <button class="therichpost-bar-item therichpost-button therichpost-hide-large therichpost-hover-none therichpost-hover-text-light-grey" (click)="therichpost_open()"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="therichpost-bar-item therichpost-right">Logo</span>
 </div>
+<!-- Sidebar/menu -->
+<nav class="therichpost-sidebar therichpost-collapse therichpost-white therichpost-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="therichpost-container therichpost-row">
+    <div class="therichpost-col s4">
+      <img src="../assets/image/image2.jpg" class="therichpost-circle therichpost-margin-right" style="width:46px">
+    </div>
+    <div class="therichpost-col s8 therichpost-bar">
+      <span><h3>Welcome,</h3> <h2>{{user.firstName}}&nbsp;{{user.lastName}}</h2></span><br>
+    </div>
+  </div>
+  <hr>
+  <div class="therichpost-container">
+    <h5>Dashboard</h5>
+  </div>
+  <div class="therichpost-bar-block">
+    <a routerLink="/" class="therichpost-bar-item therichpost-button therichpost-padding-16 therichpost-hide-large therichpost-dark-grey therichpost-hover-black" (click)="therichpost_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="#" class="therichpost-bar-item therichpost-button therichpost-padding therichpost-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+   <!-- <a href="#" class="therichpost-bar-item therichpost-button therichpost-padding"><i class="fa fa-eye fa-fw"></i>  Views</a> -->
+    <a routerLink="/users" class="therichpost-bar-item therichpost-button therichpost-padding"><i class="fa fa-users fa-fw"></i>  Manage Users</a>
+    <a href="#" class="therichpost-bar-item therichpost-button therichpost-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+  </div>
+</nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="therichpost-overlay therichpost-hide-large therichpost-animate-opacity" (click)="therichpost_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- !PAGE CONTENT! -->
+<div class="therichpost-main" style="margin-left:300px;margin-top:43px;">
+  <!-- Header -->
+  <header class="therichpost-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i> <h1>Dashboard</h1></b></h5>
+  </header>
+  <div class="therichpost-row-padding therichpost-margin-bottom">
+    <div class="therichpost-quarter">
+      <div class="therichpost-container therichpost-red therichpost-padding-16">
+        <div class="therichpost-left"><i class="fa fa-comment therichpost-xxxlarge"></i></div>
+        <div class="therichpost-right">
+          <h3>52</h3>
+        </div>
+        <div class="therichpost-clear"></div>
+        <h4>Messages</h4>
+      </div>
+    </div>
+    <div class="therichpost-quarter">
+      <div class="therichpost-container therichpost-blue therichpost-padding-16">
+        <div class="therichpost-left"><i class="fa fa-eye therichpost-xxxlarge"></i></div>
+        <div class="therichpost-right">
+          <h3>99</h3>
+        </div>
+        <div class="therichpost-clear"></div>
+        <h4>Views</h4>
+      </div>
+    </div>
+    <div class="therichpost-quarter">
+      <div class="therichpost-container therichpost-teal therichpost-padding-16">
+        <div class="therichpost-left"><i class="fa fa-share-alt therichpost-xxxlarge"></i></div>
+        <div class="therichpost-right">
+          <h3>23</h3>
+        </div>
+        <div class="therichpost-clear"></div>
+        <h4>Shares</h4>
+      </div>
+    </div>
+    <div class="therichpost-quarter">
+      <div class="therichpost-container therichpost-orange therichpost-text-white therichpost-padding-16">
+        <div class="therichpost-left"><i class="fa fa-users therichpost-xxxlarge"></i></div>
+        <div class="therichpost-right">
+          <h3>50</h3>
+        </div>
+        <div class="therichpost-clear"></div>
+        <h4>Users</h4>
+      </div>
+    </div>
+  </div>
+  <div class="therichpost-panel">
+    <div class="therichpost-row-padding" style="margin:0 -16px">
+      <div class="therichpost-third">
+        <h5>Regions</h5>
+        <img src="../assets/image/region.png" style="width:100%" alt="Google Regional Map">
+      </div>
+      <div class="therichpost-twothird">
+        <h5>Feeds</h5>
+        <table class="therichpost-table therichpost-striped therichpost-white">
+          <tr>
+            <td><i class="fa fa-user therichpost-text-blue therichpost-large"></i></td>
+            <td>New record, over 90 views.</td>
+            <td><i>10 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-bell therichpost-text-red therichpost-large"></i></td>
+            <td>Database error.</td>
+            <td><i>15 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-users therichpost-text-yellow therichpost-large"></i></td>
+            <td>New record, over 40 users.</td>
+            <td><i>17 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-comment therichpost-text-red therichpost-large"></i></td>
+            <td>New comments.</td>
+            <td><i>25 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-bookmark therichpost-text-blue therichpost-large"></i></td>
+            <td>Check transactions.</td>
+            <td><i>28 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-laptop therichpost-text-red therichpost-large"></i></td>
+            <td>CPU overload.</td>
+            <td><i>35 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-share-alt therichpost-text-green therichpost-large"></i></td>
+            <td>New shares.</td>
+            <td><i>39 mins</i></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="therichpost-container">
+    <h5>General Stats</h5>
+    <p>New Visitors</p>
+    <div class="therichpost-grey">
+      <div class="therichpost-container therichpost-center therichpost-padding therichpost-green" style="width:25%">+25%</div>
+    </div>
+    <p>New Users</p>
+    <div class="therichpost-grey">
+      <div class="therichpost-container therichpost-center therichpost-padding therichpost-orange" style="width:50%">50%</div>
+    </div>
+    <p>Bounce Rate</p>
+    <div class="therichpost-grey">
+      <div class="therichpost-container therichpost-center therichpost-padding therichpost-red" style="width:75%">75%</div>
+    </div>
+  </div>
+  <hr>
+  <div class="therichpost-container">
+    <h5>Countries</h5>
+    <table class="therichpost-table therichpost-striped therichpost-bordered therichpost-border therichpost-hoverable therichpost-white">
+      <tr>
+        <td>United States</td>
+        <td>65%</td>
+      </tr>
+      <tr>
+        <td>UK</td>
+        <td>15.7%</td>
+      </tr>
+      <tr>
+        <td>Russia</td>
+        <td>5.6%</td>
+      </tr>
+      <tr>
+        <td>Spain</td>
+        <td>2.1%</td>
+      </tr>
+      <tr>
+        <td>India</td>
+        <td>1.9%</td>
+      </tr>
+      <tr>
+        <td>France</td>
+        <td>1.5%</td>
+      </tr>
+    </table><br>
+    <button class="therichpost-button therichpost-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button>
+  </div>
+  <hr>
+  <div class="therichpost-container">
+    <h5>Recent Users</h5>
+    <ul class="therichpost-ul therichpost-card-4 therichpost-white">
+      <li class="therichpost-padding-16">
+        <img src="../assets/image/avatar2.png" class="therichpost-left therichpost-circle therichpost-margin-right" style="width:35px">
+        <span class="therichpost-xlarge">Mike</span><br>
+      </li>
+      <li class="therichpost-padding-16">
+        <img src="../assets/image/avtar5.png" class="therichpost-left therichpost-circle therichpost-margin-right" style="width:35px">
+        <span class="therichpost-xlarge">Jill</span><br>
+      </li>
+      <li class="therichpost-padding-16">
+        <img src="../assets/image/avatar6.png" class="therichpost-left therichpost-circle therichpost-margin-right" style="width:35px">
+        <span class="therichpost-xlarge">Jane</span><br>
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div class="therichpost-container">
+    <h5>Recent Comments</h5>
+    <div class="therichpost-row">
+      <div class="therichpost-col m2 text-center">
+        <img class="therichpost-circle" src="../assets/image/avatar3.png" style="width:96px;height:96px">
+      </div>
+      <div class="therichpost-col m10 therichpost-container">
+        <h4>John <span class="therichpost-opacity therichpost-medium">Sep 29, 2014, 9:12 PM</span></h4>
+        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+    <div class="therichpost-row">
+      <div class="therichpost-col m2 text-center">
+        <img class="therichpost-circle" src="../assets/image/avatar1.png" style="width:96px;height:96px">
+      </div>
+      <div class="therichpost-col m10 therichpost-container">
+        <h4>Bo <span class="therichpost-opacity therichpost-medium">Sep 28, 2014, 10:15 PM</span></h4>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="therichpost-container therichpost-dark-grey therichpost-padding-32">
+    <div class="therichpost-row">
+      <div class="therichpost-container therichpost-third">
+        <h5 class="therichpost-bottombar therichpost-border-green">Demographic</h5>
+        <p>Language</p>
+        <p>Country</p>
+        <p>City</p>
+      </div>
+      <div class="therichpost-container therichpost-third">
+        <h5 class="therichpost-bottombar therichpost-border-red">System</h5>
+        <p>Browser</p>
+        <p>OS</p>
+        <p>More</p>
+      </div>
+      <div class="therichpost-container therichpost-third">
+        <h5 class="therichpost-bottombar therichpost-border-orange">Target</h5>
+        <p>Users</p>
+        <p>Active</p>
+        <p>Geo</p>
+        <p>Interests</p>
+      </div>
+    </div>
+  </div>
+  <!-- Footer
+  <footer class="therichpost-container therichpost-padding-16 therichpost-light-grey">
+    <h4>FOOTER</h4>
+  </footer> -->
+  <!-- End page content -->
+</div>
+

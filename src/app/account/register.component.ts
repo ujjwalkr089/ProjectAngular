@@ -8,6 +8,7 @@ import { AccountService, AlertService } from '@app/_services';
 @Component({ templateUrl: 'register.component.html' })
 export class RegisterComponent implements OnInit {
     form: FormGroup;
+    showModal: boolean;
     loading = false;
     submitted = false;
 
@@ -18,6 +19,18 @@ export class RegisterComponent implements OnInit {
         private accountService: AccountService,
         private alertService: AlertService
     ) { }
+
+    // tslint:disable-next-line: typedef
+    show()
+    {
+      this.showModal = true;
+    }
+
+    // tslint:disable-next-line: typedef
+    hide()
+    {
+      this.showModal = false;
+    }
 
     // tslint:disable-next-line: typedef
     ngOnInit() {
@@ -43,6 +56,10 @@ export class RegisterComponent implements OnInit {
         // stop here if form is invalid
         if (this.form.invalid) {
             return;
+        }
+        if (this.submitted)
+        {
+          this.showModal = false;
         }
 
         this.loading = true;

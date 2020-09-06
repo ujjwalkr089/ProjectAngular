@@ -8,6 +8,7 @@ import { AccountService, AlertService } from '@app/_services';
 @Component({ templateUrl: 'login.component.html' })
 export class LoginComponent implements OnInit {
     form: FormGroup;
+    showModal: boolean;
     loading = false;
     submitted = false;
     returnUrl: string;
@@ -19,6 +20,18 @@ export class LoginComponent implements OnInit {
         private accountService: AccountService,
         private alertService: AlertService
     ) { }
+
+    // tslint:disable-next-line: typedef
+     // show()
+     // {
+     //   this.showModal = true;
+     // }
+
+      // tslint:disable-next-line: typedef
+     hide()
+      {
+        this.showModal = false;
+      }
 
     // tslint:disable-next-line: typedef
     ngOnInit() {
@@ -46,6 +59,10 @@ export class LoginComponent implements OnInit {
         if (this.form.invalid) {
             return;
         }
+       // if (this.submitted)
+       // {
+       //   this.showModal = false;
+       // }
 
         this.loading = true;
         this.accountService.login(this.f.username.value, this.f.password.value)
