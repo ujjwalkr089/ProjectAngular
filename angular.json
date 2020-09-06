@@ -92,9 +92,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.less"
+              "src/styles.less",
+              "src/assets/styles/therichpost.css",
+              "node_modules/bootstrap/dst/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dst/js/bootstrap.min.js"
+            ]
           }
         },
         "lint": {
